@@ -1,0 +1,146 @@
+/*reset*/
+*{
+    margin:0;
+    padding:0;
+}
+
+:root { /*//所有牽涉到滾輪的都會採用這個功能 因為:root中的屬性是全域的*/
+    scroll-behavior: smooth; 
+  } 
+body{
+    background-color:orange;
+    overflow-x:hidden;
+  
+} 
+/* html{     
+    overflow-x:hidden;
+    } */
+/*navbar*/
+/* nav{
+    scroll-behavior: smooth;
+} */
+
+
+
+ul{
+    list-style-type: none;/*這會把list前面的點弄掉*/
+    margin:0;
+    /* padding:0; */
+  
+    
+    overflow: hidden;
+    background-color: #333;
+    position: fixed; 
+     padding-left:65%; /*從左邊推到右邊 */
+    top:0;
+    width: 100%;
+}
+li{
+    float: left;
+
+}
+
+li a{   /*list中的超連結才可以把底線弄掉*/
+    text-decoration:none; 
+    display: block;
+    color:white;
+    padding:14px 16px ; 
+    font-size: 20px;
+   }
+
+
+li a:hover{
+    background-color:#111;
+
+
+}
+            /*第一部分 aboutme的地方*/
+.welcome-section
+{
+    display:flex;
+    align-items:center; 
+     text-align: center; 
+    font-family: 'Sigmar One', cursive; 
+   font-size:50px;
+   /* margin-top: 80px; 雖然*/
+   width:100%;
+   height: 100vh;
+   
+}
+
+/*              中間作品的部分          */
+#projects{
+   background-color:#000;
+   padding:10rem 2rem;
+
+}
+ /* .project-section-header {
+    max-width: 640px;
+    margin: 0 auto 6rem auto;
+    border-bottom: 0.2rem solid #fff;
+    color: white;
+}  */
+ .project-section-header{
+    color:white;
+    font-family: 'Sigmar One', cursive; 
+    font-size:25px;
+   margin: 0 auto 6rem auto;
+   text-align: center; 
+     width:50%; 
+    border-bottom:0.2rem solid white;
+   
+
+} 
+.projects-grid{
+    display: grid;                  /*grid就有點像excel那樣 有欄跟列*/
+    /* grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); */
+    grid-template-columns: 300px 300px 300px ;            /*定義容器有多少欄*/
+   /* grid-template-rows: 200px 200px 200px ;            定義容器有多少列*/
+    grid-template-rows: 200px 200px  ; 
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+
+}
+
+.project{                       /*超連結*/
+    text-decoration: none;
+}  
+ .code{
+     color:#000; 
+    transition:color 0.3s ease-out;
+} 
+
+.project:hover .code{
+    color:#ff7f50;
+}
+
+.project-title{
+    position:relative;
+    font-size: 18px;
+    left:40%;
+    font-family: 'Poppins', sans-serif;
+    color:white;
+  
+}
+          /*            contact-section    最下面的部分 */
+
+.contact-section{
+height: 35vh;
+width: 100%;
+text-align: center;
+font-family: 'Sigmar One', cursive; 
+}
+.contact-section-header{
+    font-size: 30px;
+}
+
+  
+footer{ /*    加了position後 才可以用方向移動元素      */
+    position: absolute;
+    right: 10px;
+    
+    
+}
